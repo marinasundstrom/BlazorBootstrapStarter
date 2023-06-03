@@ -1,0 +1,35 @@
+<li class="nav-item dropdown">
+    <a class="nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+        aria-expanded="false" aria-label="Toggle theme (auto)">
+        <i class="@SelectedModeIcon"></i>
+        <span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+        <li><a class="dropdown-item" @onclick="() => SelectMode(false)"><i class="bi bi-brightness-high-fill me-2"></i> Light</a></li>
+        <li><a class="dropdown-item" @onclick="() => SelectMode(true)"><i class="bi bi-moon-stars-fill me-2"></i> Dark</a></li>
+        <li><a class="dropdown-item" @onclick="() => SelectMode(null)"><i class="bi bi-circle-half me-2"></i> Auto</a></li>
+    </ul>
+</li>
+
+@code {
+    bool? darkModeEnabled = null;
+
+    public void SelectMode(bool? isDarkMode) 
+    {
+        if(isDarkMode is null) 
+        {
+            SetAutoMode();
+        }
+        else if(isDarkMode == false) 
+        {
+            SetLightMode();
+        }
+        else if(isDarkMode == true) 
+        {
+            SetDarkMode();
+        }
+        darkModeEnabled = isDarkMode;
+    }
+
+    public string SelectedModeIcon => darkModeEnabled is null ? "bi bi-circle-half" : (darkModeEnabled.GetValueOrDefault() ?  "bi bi-moon-stars-fill" : "bi bi-brightness-high-fill");
+}
