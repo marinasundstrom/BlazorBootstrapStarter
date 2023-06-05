@@ -108,6 +108,11 @@ body[data-bs-theme="light"] {
         background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;    
     }
 
+    footer {
+        --bs-bg-opacity: 1;
+        background-color: #ededed;  
+    }
+
     .card { 
         border: 0;
     }
@@ -116,7 +121,12 @@ body[data-bs-theme="light"] {
 body[data-bs-theme="dark"] {
     .custom-bg {
         --bs-bg-opacity: 0.5;
-        background-color: #1e1f21 !important;
+        background-color: #181818;
+    }
+
+    footer {
+        --bs-bg-opacity: 1;
+        background-color: #000000;  
     }
 
     .card {
