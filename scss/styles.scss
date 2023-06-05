@@ -91,6 +91,43 @@ $bootstrap-icons-font-dir: "../fonts";
 @import "bootstrap-icons/font/bootstrap-icons";
 
 //
+// Color Mode Overrides
+//
+
+:root {
+    --custom-dark: #101010;
+}
+
+[data-bs-theme="dark"] {
+    //--bs-body-bg: var(--custom-dark);
+}
+
+body[data-bs-theme="light"] {
+    .custom-bg {
+        --bs-bg-opacity: 1;
+        background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;    
+    }
+
+    .card { 
+        border: 0;
+    }
+}
+
+body[data-bs-theme="dark"] {
+    .custom-bg {
+        --bs-bg-opacity: 0.5;
+        background-color: #1e1f21 !important;
+    }
+
+    .card {
+        background-color: var(--bs-tertiary-bg); // #1a1a1a;
+        border: 1px solid rgba(0,0,0,.125);
+        border-radius: .25rem;
+    }    
+}
+
+
+//
 // Custom styles
 //
 
@@ -160,7 +197,10 @@ a, .btn-link {
 
 .text-white-50 { color: rgba(255, 255, 255, .5); }
 
-.bg-purple { background-color: #6f42c1; }
+.bg-purple { 
+    background-color: #6f42c1; 
+}
+
 .valid.modified:not([type=checkbox]) {
     outline: 1px solid #26b050;
 }
