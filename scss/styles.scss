@@ -62,7 +62,7 @@ $success: #7952b3;
 // @import "bootstrap/scss/breadcrumb";
 // @import "bootstrap/scss/accordion";
 // @import "bootstrap/scss/pagination";
-// @import "bootstrap/scss/badge";
+@import "bootstrap/scss/badge";
 @import "bootstrap/scss/alert";
 // @import "bootstrap/scss/progress";
 // @import "bootstrap/scss/list-group";
@@ -108,7 +108,7 @@ body[data-bs-theme="light"] {
         background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;    
     }
 
-    footer {
+    .footer {
         --bs-bg-opacity: 1;
         background-color: #ededed;  
 
@@ -129,7 +129,7 @@ body[data-bs-theme="dark"] {
         background-color: #181818;
     }
 
-    footer {
+    .footer {
         --bs-bg-opacity: 1;
         background-color: #101010;
 
@@ -146,7 +146,7 @@ body[data-bs-theme="dark"] {
     }    
 }
 
-footer a:hover, .footer a:focus {
+.footer a:hover, .footer a:focus {
     color: #0d6efd !important;
     text-decoration: underline !important;
 }
@@ -160,6 +160,10 @@ html,
 body {
   overflow-x: hidden; /* Prevent scroll on narrow devices */
   font-family: 'Open Sans', sans-serif;
+}
+
+p {
+    line-height: 1.7;
 }
 
 main.container {

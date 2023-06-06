@@ -1,0 +1,19 @@
+a {
+    text-decoration: none;
+    color: inherit;
+    font-size: .875rem;
+}
+
+a:focus, a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    padding-left: 1rem;
+    margin-top: .25rem;
+}
+
+ul li {
+    padding-left: 0;
+    list-style: none;
+}
