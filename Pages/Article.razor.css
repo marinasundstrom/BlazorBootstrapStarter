@@ -22,14 +22,21 @@ h2:not(:first-child) {
     .main {
         display:grid;
         gap: 1.5rem;
-        grid-template-areas: "intro" "toc" "content";
+        grid-template-areas: 
+        "intro" 
+        "toc" 
+        "content";
+
         grid-template-rows: auto auto 1fr
     }
 }
 
 @media (min-width: 992px) {
     .main {
-        grid-template-areas:"intro   toc" "content toc";
+        grid-template-areas:
+            "intro   toc" 
+            "content toc";
+
         grid-template-columns: 4fr 1fr;
         grid-template-rows: auto 1fr
     }
