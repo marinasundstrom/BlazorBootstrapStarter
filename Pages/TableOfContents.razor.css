@@ -11,11 +11,11 @@ a {
     border-left: .125rem solid transparent;
 }
 
-a:active {
+a:active, a.active {
     font-weight: 500;
 }
 
-a:focus, a:hover, a:active {
+a:focus, a:hover, a:active, a.active {
     text-decoration: none;
     color: #6f42c1;
     border-left-color: #6f42c1;
@@ -33,4 +33,14 @@ nav ul ul  {
 ul li {
     padding-left: 0;
     list-style: none;
+}
+
+.on-sm {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .on-sm {
+        display: block;
+    }
 }

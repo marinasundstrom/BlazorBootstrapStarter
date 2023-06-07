@@ -5,12 +5,16 @@
     margin-bottom: 1rem;
 }
 
+hr {
+    margin-top: 0px;
+}
+
 h6 {
     text-transform: uppercase;
 }
 
 h2:not(:first-child) {
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .main {
@@ -65,5 +69,11 @@ h2:not(:first-child) {
         height: calc(100vh - 7rem);
         overflow-y: auto;
         align-self: start;
+    }
+}
+
+@media (max-width: 992px) {
+    .toc {
+        margin-left: -1rem;
     }
 }

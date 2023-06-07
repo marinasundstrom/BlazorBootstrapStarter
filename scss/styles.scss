@@ -94,6 +94,12 @@ $bootstrap-icons-font-dir: "../fonts";
 // Color Mode Overrides
 //
 
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
 :root {
     --custom-dark: #101010;
 }
