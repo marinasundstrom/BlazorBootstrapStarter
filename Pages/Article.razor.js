@@ -5,11 +5,11 @@ export function init() {
             // verify the element is intersecting
             if(entry.isIntersecting && entry.intersectionRatio >= 0.55) {
                 // remove old active class
-                document.querySelector('.active').classList.remove('active');
+                document.querySelectorAll('.active').forEach(el => el.classList.remove('active'));
                 // get id of the intersecting section
                 var id = entry.target.getAttribute('id');
                 // find matching link & add appropriate class
-                var newLink = document.querySelector(`[href="#${id}"]`);
+                var newLink = document.querySelector(`[href$="#${id}"]`);
                 
                 newLink?.classList.add('active');
             }
@@ -18,7 +18,7 @@ export function init() {
 
     // init the observer
     const options = {
-        threshold: 0.55
+        threshold: 1.0
     }
 
     const observer = new IntersectionObserver(changeNav, options);
